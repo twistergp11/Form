@@ -1,15 +1,15 @@
 const steps = [
   {
-    title: "User Info",
-    fields: ["username", "password"],
+    title: 'User Info',
+    fields: ['username', 'password'],
   },
   {
-    title: "Address Info",
-    fields: ["address", "city"],
+    title: 'Address Info',
+    fields: ['address', 'city'],
   },
   {
-    title: "Billing Info",
-    fields: ["card", "cvv"],
+    title: 'Billing Info',
+    fields: ['card', 'cvv'],
   },
 ];
 
@@ -19,7 +19,4 @@ const buttonText = {
   submitText: 'Submit',
 };
 
-export {
-  steps,
-  buttonText
-}
+export { steps, buttonText };

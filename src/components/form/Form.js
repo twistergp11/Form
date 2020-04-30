@@ -30,9 +30,17 @@ const Form = () => {
 
   return (
     <div>
-      <h1>{`Step ${step}/${maxSteps} - ${title}`}</h1>
-      {stepFields.map((name) => (
-        <input name={name} value={fields[value]} onChange={handleChange} />
+      <h1>{`Step ${step + 1}/${maxSteps} - ${title}`}</h1>
+      {stepFields.map(name => (
+        <React.Fragment key={name}>
+          <label htmlFor={`${name}-input`}>{name}:&nbsp;</label>
+          <input
+            id={`${name}-input`}
+            name={name}
+            value={fields[name]}
+            onChange={handleChange}
+          />
+        </React.Fragment>
       ))}
       {hasPrevious && <button onClick={handlePrevious}>{previousText}</button>}
       {hasNext && <button onClick={handleNext}>{nextText}</button>}
@@ -40,3 +48,5 @@ const Form = () => {
     </div>
   );
 };
+
+export default Form;
