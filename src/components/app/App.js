@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "./Form";
-import FormProvider from "./FormProvider";
+import { FormProvider, Form } from "components/Form";
 
 function App() {
   return (

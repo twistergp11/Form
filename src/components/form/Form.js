@@ -1,13 +1,7 @@
-import React from "react";
-import useFormState from "state/form/context/useFormState";
-import {
-  input,
-  nextStep,
-  previousStep,
-  submit,
-  reset,
-} from "state/form/actions";
-import { steps, buttonText } from "./steps";
+import React from 'react';
+import useFormState from './context/useFormState';
+import { input, nextStep, previousStep, submit } from './state/actions';
+import { steps, buttonText } from './steps';
 
 const Form = () => {
   const {

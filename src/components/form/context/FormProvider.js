@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import FormContext from "./FormContext";
-import { formReducer, initialFormState } from "./state/reducers";
+import { formReducer, initialFormState } from "../state/reducers";
 
 const FormProvider = ({ children }) => {
   const [state, dispatch] = useReducer(formReducer, initialFormState);
