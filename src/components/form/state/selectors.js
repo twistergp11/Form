@@ -8,4 +8,4 @@ const getDerivedValues = state => ({
   hasSubmit: hasSubmit(state),
 });
 
-export { getDerivedValues }
+export { getDerivedValues };

@@ -4,12 +4,12 @@ const clamp = (min, max, number) => Math.min(max, Math.max(min, number));
 
 const initialFormState = {
   fields: {
-    username: "",
-    password: "",
-    address: "",
-    city: "",
-    card: "",
-    cvv: "",
+    username: '',
+    password: '',
+    address: '',
+    city: '',
+    card: '',
+    cvv: '',
   },
   step: 0,
   maxSteps: 3,
@@ -18,7 +18,7 @@ const initialFormState = {
 
 const formReducer = (state, { type, payload }) => {
   switch (type) {
-    case INPUT:
+    case INPUT: {
       const { name, value } = payload;
       return {
         ...state,
@@ -27,26 +27,32 @@ const formReducer = (state, { type, payload }) => {
           [name]: value,
         },
       };
-    case NEXT_STEP:
+    }
+    case NEXT_STEP: {
       return {
         ...state,
         step: clamp(0, state.maxSteps, state.step + 1),
-      }
-    case PREVIOUS_STEP:
+      };
+    }
+    case PREVIOUS_STEP: {
       return {
         ...state,
         step: clamp(0, state.maxSteps, state.step - 1),
-      }
-    case SUBMIT:
+      };
+    }
+    case SUBMIT: {
       return {
         ...state,
         done: true,
-      }
-    case RESET:
+      };
+    }
+    case RESET: {
       return initialFormState;
-    default:
+    }
+    default: {
       return state;
+    }
   }
 };
 
-export { formReducer, initialFormState }
+export { formReducer, initialFormState };
